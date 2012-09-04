@@ -5,7 +5,8 @@
 	<style type="text/css">
 body {font-family:Helvetica,Arial,sans-serif; font-size:14px;}
 div {margin:40px; padding:40px; background:#eee;}
-h1, small, form {margin:40px;}
+h1 {margin:80px 40px 0;}
+small, form {margin:20px 40px; display:block;}
 input[type="text"] {padding:5px; width:300px;}
 	</style>
 </head>
@@ -19,7 +20,9 @@ function enc() {
 // ]]>
 	</script>
 
-	<h1>Simple Rijndael codec for obfuscating links badly.</h1>
+	<h1>Simple AES (Rijndael) codec for obfuscating links badly.</h1>
+
+	<small>This trick should be enough to fool any basic scraping tech, but a human who looks at the included rijndael implementation will note the private key included in plain text. WTF seriously? If someone wants your links, they&rsquo;re going to get them. There&rsquo;s no point in trying to fool yourself!</small>
 
 	<div id="result"></div>
 
