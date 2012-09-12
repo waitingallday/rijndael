@@ -3,11 +3,15 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script src="rijndael.js" type="text/javascript"></script>
 	<style type="text/css">
-body {font-family:Helvetica,Arial,sans-serif; font-size:14px;}
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
+body {font-family:Lato,Helvetica,Arial,sans-serif; font-weight:300; font-size:22px;}
 div {margin:40px; padding:40px; background:#eee;}
-h1 {margin:80px 40px 0;}
+pre {font-size:0.5em;}
+h1,h2 {margin:80px 40px 0; font-weight:300;}
+h2 {margin:20px 40px 0; color:#999;}
 small, form {margin:20px 40px; display:block;}
-input[type="text"] {padding:5px; width:300px;}
+input[type="text"] {padding:10px; font-size:16px; font-family:Lato,Helvetica,Arial,sans-serif; font-weight:300; border:0; border-bottom:1px solid #999; width:300px;}
+input[type="submit"] {padding:10px; font-size:12px; font-family:Lato,Helvetica,Arial,sans-serif; font-weight:300; text-transform:uppercase; background:#333; color:#fff; border:1px solid #000;}
 	</style>
 </head>
 <body>
@@ -22,7 +26,13 @@ function enc() {
 
 	<h1>Simple AES (Rijndael) codec for obfuscating links badly.</h1>
 
-	<small>This trick should be enough to fool any basic scraping tech, but a human who looks at the included rijndael implementation will note the private key included in plain text. WTF seriously? If someone wants your links, they&rsquo;re going to get them. There&rsquo;s no point in trying to fool yourself!</small>
+	<h2>What is this even for</h2>
+
+	<small>This trick should be enough to fool any basic scraping tech, by encoding a given string via an AES cipher.</small>
+
+	<h2>Is that the private key included in plain text</h2>
+
+	<small>A human who looks at the included codec will note the private key is, in fact, included in plain text. This is just a quick, trivial way of obscuring links, especially for email.</small>
 
 	<div id="result"></div>
 
